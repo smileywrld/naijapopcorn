@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Plain popcorn</title>
+  <desc id="desc">A bowl of warm plain popcorn</desc>
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#fff9df"/><stop offset="1" stop-color="#e5c98c"/></linearGradient>
+    <linearGradient id="tub" x2="0" y2="1"><stop stop-color="#ee6556"/><stop offset="1" stop-color="#ae3938"/></linearGradient>
+    <filter id="shadow"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <ellipse cx="400" cy="510" rx="290" ry="30" fill="#7e5b26" opacity=".2" filter="url(#shadow)"/>
+  <circle cx="155" cy="105" r="76" fill="#ffe59a"/>
+  <circle cx="260" cy="76" r="65" fill="#fff2b5"/>
+  <circle cx="365" cy="102" r="80" fill="#ffdf83"/>
+  <circle cx="475" cy="72" r="68" fill="#fff0ad"/>
+  <circle cx="600" cy="112" r="82" fill="#ffe59a"/>
+  <circle cx="680" cy="180" r="65" fill="#fff2b5"/>
+  <path d="M120 198h560l-58 310H178z" fill="url(#tub)" stroke="#923333" stroke-width="4"/>
+  <path d="M190 205h74l-35 296h-73zM365 205h70l-2 303h-70zM540 205h72l38 296h-72z" fill="#ffe08a"/>
+  <path d="M119 198c0-46 47-76 83-46 20-67 119-72 145-6 38-60 143-43 151 24 51-38 119 9 105 72-13 57-91 49-113 18-41 46-124 32-143-19-39 44-118 27-132-21-43 43-112 13-96-22z" fill="#ffe9a3" stroke="#d7b963" stroke-width="5"/>
+  <path d="M160 126c30 35 64 12 91 35 30 25 55-13 86 10 31 23 57-18 88 4 32 22 58-11 92 12 35 24 65-8 99 20" fill="none" stroke="#d59b3c" stroke-width="10" stroke-linecap="round" opacity=".65"/>
+  <text x="400" y="355" text-anchor="middle" fill="#fff3b0" font-family="Georgia, serif" font-size="35" font-weight="700" letter-spacing="3">NAIJA POP</text>
+  <ellipse cx="400" cy="505" rx="282" ry="28" fill="#ac7727" opacity=".2"/>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</svg>
